@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/conmmon.css" />
+		<style type="text/css">
+			#content{height: 587px;background: #E9E9E9;padding-top: 55px;}
+			#content .cont_box{height: 480px;background: #fff;border: 1px solid #ccc;padding: 40px 10px 10px;position: relative;}
+			#content .cont_box ul{position: absolute;top: -38px;left: 42%;margin-left: -253px;}
+			#content .cont_box li{height: 36px;border: 1px solid #ccc;background: #F8F8F8;margin-left: 10px;border-bottom: 0;line-height: 35px;width: 240px;text-align: center;}
+			#content .cont_box li a{font-size: 14px;font-weight: bold;color: #979797;}
+			#content .cont_box li.cont_zhuce{border-top: 3px solid #FF5C00;height: 35px;background: #fff;}
+			#content .cont_box li.cont_zhuce a{color: #FF5C00}
+			#content .cont_box li.cont_zhuce i{display: inline-block;height: 27px;width: 27px;vertical-align: -7px;background: url(../img/index/register.png) no-repeat -187px -2px;}
+			#content .cont_box li.cont_login i{display: inline-block;height: 20px;width: 36px;vertical-align: -6px;background: url(../img/index/register.png) no-repeat -216px -8px;}
+			#content .cont_box form{width: 500px;}
+			#content .cont_box dl{height: 63px;line-height: 20px;margin-top: 3px;}
+			#content .cont_box dl dt label{height: 35px;text-align: right;width: 150px;line-height: 35px;display: block;padding-right: 5px;font-size: 12px;color: #666;}
+			#content .cont_box dl .cont_div{overflow: hidden;position: relative;}
+			#content .cont_box .cont_div input{border: 1px solid #ccc;vertical-align: middle;height: 35px;width: 270px;padding-left: 5px;}
+			#content .cont_div i{display: inline-block;vertical-align: middle;height: 28px;width: 34px;background: url(../img/index/register.png) no-repeat;position: absolute;right: 5px;top: 3px;}
+			#content .cont_box dd p{line-height: 16px;border: 1px solid #fff;border-radius: 3px;color: #E60000;background: #fff;margin-top: 2px;vertical-align: middle;padding: 2px 5px 2px 2px;height: 16px;position: relative;padding-left: 22px;font-size: 12px;color: #f00;display: inline-block;display: none;float: left;}
+			#content .cont_box dd p b{display: block;width: 16px;height: 16px;background: url(../img/index/onSuccess.gif) no-repeat center center ;position: absolute;left: 2px;}
+			#content .cont_box .cont_div input.yanzheng{width: 126px;vertical-align: middle;}
+			#content .cont_box .cont_div img{display: inline-block;height: 35px;width: 98px;vertical-align: middle;margin: 0 5px;cursor: pointer;}
+			#content .cont_box .cont_div .change_tu{color: #00B8FF;}
+			#content .cont_box .cont_div input.duanxin{width: 126px;vertical-align: middle;}
+			#content .cont_box .cont_div input.hqsjyzm{height: 31px;width: 113px;vertical-align: middle;background: url(../img/index/register.png) no-repeat 0 0;border: 0;cursor: pointer;margin-left: 10px;}
+			#content .cont_box .cont_div #cont_check{width: 15px;height: 15px;margin: 3px;}
+			#content .cont_box .cont_sub{display: block;height: 40px;width: 230px;background: url(../img/index/register.png) no-repeat 0 -31px;margin: 10px 0 20px 0;}
+			#content .cont_box .con_icon a{display: inline-block;height: 24px;width: 24px;background: url(../img/index/register.png) no-repeat;margin: 4px;}
+			#content .cont_box .con_icon a.wx_icon{background-position: -2px -301px;}
+			#content .cont_box .con_icon a.zfb_icon{background-position: -28px -301px;}
+			#content .cont_box .con_icon a.qq_icon{background-position: -84px -301px;}
+			#content .cont_box .cont_Img{position: absolute;top: 50px;right: 90px;}
+			#content .cont_box .cont_Img img{width: 340px;height: 300px;}
+		</style>
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/zhuce.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="h_nav">
+			<div class="w">
+				<ul class="l first">
+					<li class="l cur"><a href="#">母婴之家</a></li>
+					<li class="l"><a href="#">母婴海淘</a></li>
+					<li class="l last"><a href="#"><span></span>手机版</a></li>
+				</ul>
+				<ul class="r wai">
+					<li class="l wu" style="padding-right: 0;"><a style="padding-right: 0;">欢迎来到母婴之家！</a></li>
+					<li class="l log"><a class="l" href="#">[登录]</a><a class="l" href="#">[免费注册]</a></li>
+					<li class="l list">
+						<a class="w_a" href="#">我的订单<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">我的家</a>
+							<a class="n_a" href="#">我的提问</a>
+							<a class="n_a" href="#">我的评论</a>
+							<a class="n_a" href="#">我的收藏</a>
+							<a class="n_a" href="#">我的幸运星</a>
+						</div>
+					</li>
+					<li class="l list"><a class="w_a" href="#">客户服务<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#" style="width: 80px;">在线客服</a>
+							<a class="n_a" href="#" style="width: 80px;">帮助中心</a>
+						</div>
+					</li>
+					<li class="l"><a href="#">商务合作</a></li>
+					<li class="l list wu"><a class="w_a" href="#">网站导航<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">分类导航</a>
+							<a class="n_a" href="#">品牌导航</a>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div id="header" class="w">
+			<h1 class="l"><a href="#"><img src="../img/index/logo29new.png"/></a></h1>		
+		</div>
+		<div id="content">
+			<div class="cont_box w">
+				<ul>
+					<li class="cont_zhuce l">
+						<i></i>
+						<a href="zhuce.html">注册</a>
+					</li>
+					<li class="cont_login l">
+						<i></i>
+						<a href="login.html">登录</a>
+					</li>					
+				</ul>
+				<form action="" method="post">
+					<dl>
+						<dt class="l"><label for="phone">手机号：</label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="text" name="phone" id="phone" placeholder="请输入手机号" autocomplete="off" />
+								<i style="background-position:  -120px 0px;"></i>
+							</div>
+							<p></p>
+						</dd>						
+					</dl>
+					<dl>
+						<dt class="l"><label for="pass">请设置密码：</label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="text" name="pass" id="pass" placeholder="请填入密码" autocomplete="off" />
+								<i style="background-position:  -153px 0px;"></i>
+							</div>
+							<p></p>
+						</dd>						
+					</dl>
+					<dl>
+						<dt class="l"><label for="pass2">请确认密码：</label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="text" name="pass2" id="pass2" placeholder="请再次填写密码" autocomplete="off" />
+								<i style="background-position:  -153px 0px;"></i>
+							</div>
+							<p><b></b></p>
+						</dd>						
+					</dl>	
+					<dl>
+						<dt class="l"><label for="yanzheng">验证码：</label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="text" id="yanzheng" value="" class="yanzheng" placeholder="请输入图片验证码" /><img src="../img/yanzhengma/1.jpg" class="change_tu" alt="看不清楚，点击换一张" title="看不清楚，点击换一张"/>看不清？<a href="javascript:;" class="change_tu">换一张</a>
+							</div>
+							<p><b></b></p>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="l"><label for="duanxin">短信验证码：</label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="text" id="suanxin" value="" class="yanzheng" />
+								<input type="button" id="hqsjyzm" value="" class="hqsjyzm" />
+							</div>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="l"><label for="duanxin"></label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								<input type="checkbox" id="cont_check" class="cont_check"/>阅读并同意“<a href="http://www.muyingzhijia.com/help/agreement.aspx">母婴之家网站用户协议</a>”
+							</div>
+							<p><b></b></p>
+							<a class="cont_sub" href="javascript:;"></a>
+						</dd>
+					</dl>
+					<dl>
+						<dt class="l"><label for="duanxin"></label></dt>
+						<dd class="l">
+							<div class="cont_div">
+								使用合作网站账号登录母婴之家：
+							</div>
+							<div class="con_icon">
+								<a href="#" class="wx_icon" title="微博账号登录"></a>
+								<a href="#" class="zfb_icon" title="支付宝账号登录"></a>
+								<a href="#" class="qq_icon" title="QQ帐号登录"></a>								
+							</div>
+						</dd>
+					</dl>
+				</form>
+				<div class="cont_Img">
+					<a href="../index.html"><img src="../img/index/20160323111355_10_300x300.jpg"/></a>
+				</div>
+			</div>
+		</div>
+		<div id="bottom" class="w">
+			<ul class="bottom_ul">
+				<li><a href="#">首页</a></li> | 
+				<li><a href="#">公司简介</a></li> |
+				<li><a href="#">人才招聘</a></li> |
+				<li><a href="#">合作联系</a></li> |
+				<li><a href="#">企业理念</a></li> |
+			</ul>
+			<p>Copyright©2003 - 2016 muyingzhijia.com All Rights Reserved沪ICP备09021709号</p>
+			<div><a href="#"><img src="../img/index/shanghai_industry.gif"/></a></div>
+			<div class="bott_div"><a href="#"><img src="../img/index/ghs.png"/><span>沪公网安备 31010402000751号</span></a></div>
+		</div>		
+	</body>
+</html>

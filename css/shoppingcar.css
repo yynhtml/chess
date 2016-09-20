@@ -1,0 +1,70 @@
+/*==============header=================*/
+#header .car_nav{height: 36px;width: 612px;background: url(../img/shoppingcar/cart-step1.png) no-repeat;margin-top: 22px;}
+
+
+/*==============content===================*/
+#content .car_top{overflow: hidden;}
+#content .car_top h2{padding: 10px 43px;font-size: 18px;background: url(../img/shoppingcar/gouwuche.png) no-repeat 0 5px;}
+#content .car_top p{margin: 20px 17px 0px 0px;}
+#content .car_top p a{color: #FF5C00;}
+
+#content .car_down .car_cont1_top{overflow: hidden;background: #F8F8F8;padding: 0 20px;}
+#content .car_down .car_cont1_top h2{height: 44px;line-height: 44px;}
+#content .car_down .car_cont1_top h2 span{color: #777;font-size: 14px;font-weight: 100;padding-left: 5px;}
+#content .car_down .car_cont1_top ul li{float: left;height: 44px;line-height: 44px;width: 120px;text-align: center;}
+
+
+#content .car_down .car_cont1_middle{background: #fff;overflow: hidden;padding: 15px 20px 15px 25px;border-bottom: 1px solid #ccc;}
+#content .car_down .car_cont1_middle .car_left{float: left;}
+#content .car_down .car_cont1_middle .car_left img{padding: 10px;border: 1px solid #ccc;float: left;width: 60px;height: 60px;}
+#content .car_down .car_cont1_middle .car_left p{width: 380px;padding-left: 20px;padding-top: 20px;float: left;}
+#content .car_down .car_cont1_middle ul{float: right;}
+#content .car_down .car_cont1_middle ul li{float: left;width: 120px;text-align: center;padding-top: 15px;}
+#content .car_down .car_cont1_middle ul li w{display: inline-block;}
+#content .car_down .car_cont1_middle ul li s{color: #ccc;}
+#content .car_down .car_cont1_middle ul li .num{height: 26px;width: 34px;text-align: center;line-height: 26px;font-size: 14px;font-weight: bold;display: block;vertical-align: top;float: left;border: 1px solid #ccc;}
+#content .car_down .car_cont1_middle ul li .jian{display: block;height: 26px;width: 26px;border: 1px solid #ccc;border-right: none;vertical-align: top;float: left;line-height: 26px;font-size: 18px;font-weight: bold;}
+#content .car_down .car_cont1_middle ul li .jia{display: block;height: 26px;width: 26px;border: 1px solid #ccc;border-left: none;vertical-align: top;float: left;line-height: 26px;font-size: 18px;font-weight: bold;}
+#content .car_down .car_cont1_middle ul li strong{color: #FF0000;}
+
+
+
+
+#content .car_down .car_cont1_down{width:100%;height:39px;border:1px solid #ccc;background: #F8F8F8;margin-bottom: 10px;}
+#content .car_down .car_cont1_down p{display:block;margin-top:10px;}
+#content .car_down .car_cont1_down p span{display:block;float:left;}
+#content .car_down .car_cont1_down p .l1{width:598px;text-align:right;padding-right:10px;}
+#content .car_down .car_cont1_down p .l2{color:#F32043;}
+#content .car_down .car_cont1_down p .l3{width:145px;text-align:right;}
+#content .car_down .car_cont1_down p .l4{width:146px;color:#F32043;font-weight:bold;text-align:right;}
+#content .car_down .car_cont1_down p span aa{color:#666;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

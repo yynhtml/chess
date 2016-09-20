@@ -1,0 +1,89 @@
+/*==================重置样式======================*/
+h1,h2,h3,h4,h5,h6,body,p,a,input,dl,dt,dd,ul,ol,li,fieldset,legend,td,th{padding: 0;margin: 0;}
+img{display: block;border: 0;}
+body{font-size: 12px;font-family: "微软雅黑";color: #3e3e3e;}
+html,body{width: 100%;}
+ol,ul,li{list-style: none;}
+a{text-decoration: none;color: #3E3E3E;}
+a:hover{text-decoration: none;color: #FF5c00;}
+
+/*==================公共样式======================*/
+.l{float: left;}
+.r{float: right;}
+.w{width: 1000px;margin: 0 auto;}
+.cur{color: #FF5C00;}
+.ml{margin-left: 10px;}
+
+/*==================h_nav======================*/
+#h_nav{height: 42px;width: 100%;background: url(../img/index/top-navbg.png) repeat-x;}
+#h_nav ul.first{padding-top: 5px;}
+#h_nav ul.first li{height: 36px;line-height: 36px;padding: 0 10px;border-right: 1px solid #e7e7e7;}
+#h_nav ul li.cur{border: 1px solid #ccc;border-bottom: none;background: #fff;}
+#h_nav ul li.cur a
+{color: #FF5c00;}
+#h_nav ul.first a{font-size: 14px;font-weight: bold;padding: 0 10px;}
+#h_nav ul.first li.last span{display: block;width: 12px;height:20px; background: url(../img/index/sprite215new.png) no-repeat -320px -240px;position: relative;top: 7px;float: left;margin-right: 10px;transition:all .2s linear 0s;}
+#h_nav ul.first li.last a{display: block;float: left;width: 65px;}
+#h_nav ul.first li.last:hover a{background: #fff;border: 1px solid #FF5c00;border-bottom: none;padding: 0 10px;width: 65px;padding: 0 9px;}
+#h_nav ul.first li.last:hover a span{background-position: -320px -265px;}
+#h_nav .wai{height: 16px;padding: 13px 0;}
+#h_nav .wai li{padding: 0 5px;border-right: 1px solid #ccc;height: 16px;position: relative;}
+#h_nav .wai li.wu{border: none;}
+#h_nav .wai li a{display: block;height: 36px;margin-top: -10px;line-height: 36px;padding: 0 4px;z-index: 99;position: relative;}
+#h_nav .wai li.log a{color: #FF5C00;}
+#h_nav .wai li.list a.w_a i{border-width:4px;display: inline-block;border-color: #000 transparent transparent;display:inline-block;border-style: solid;margin-left: 5px;transition:all .2s linear 0s;}
+#h_nav .wai li.list:hover a.w_a{border: 1px solid #FF5C00;border-bottom: none;background: #fff;padding: 0 3px;}
+#h_nav .wai li.list:hover a.w_a i{border-color: transparent transparent #FF5C00;}
+#h_nav .wai .list .nei_dingdan{border: 1px solid #FF5C00;position: absolute;top: 26px;left: 5px;background: #fff;padding-top: 5px;display: none;z-index: 90;}
+#h_nav .wai .list:hover .nei_dingdan{display: block;}
+#h_nav .wai .nei_dingdan a.n_a{height: 32px;line-height: 32px;display: block;padding-right: 0;width: 63px;}
+#h_nav .wai .nei_dingdan a.n_a:hover{text-decoration: none;color: #FF5C00;}
+
+
+/*=================header======================*/
+#header{height: 71px;padding: 20px 0;}
+#header h1{padding: 8px 0;width: 150px;}
+
+
+/*=================footer==================*/
+#footer{float: left;}
+#footer .footer_up{color: #fff;height: 106px;width: 100%;background-color: #FF5C00;}
+#footer .footer_up dl{width: 285px;padding: 30px 0 0 25px;}
+#footer .footer_up dl dt{height: 36px;line-height: 36px;}
+#footer .footer_up dl dt a{color: #fff;font-size: 24px;}
+#footer .footer_up dl dt span{display: block;margin-right: 10px;}
+#footer .footer_up dl dd{text-align: right;padding-right: 20px;font-size: 14px;font-weight: bold;}
+#footer .footer_up dl dt span.pinzhi{height: 31px;width: 33px;background: url(../img/index/sprite215new.png) no-repeat -140px 0px;}
+#footer .footer_up dl dt span.bianjie{height: 27px;width: 38px;background: url(../img/index/sprite215new.png) no-repeat -140px -40px;}
+#footer .footer_up dl dt span.zhuanye{height: 34px;width: 34px;background: url(../img/index/sprite215new.png) no-repeat -140px -80px;}
+#footer .footer_up dl dt span.tiexin{height: 27px;width: 30px;background: url(../img/index/sprite215new.png) no-repeat -140px -120px;}
+#footer .footer_down{background: #fff;height: 155px;padding-top: 20px;padding-left: 35px;position: relative;}
+#footer .footer_down dl{width: 176px;float: left;}
+#footer .footer_down dl dt{font-size: 14px;line-height: 1.5;}
+#footer .footer_down dl dt span{display: inline-block;height: 26px;width: 26px;background: url(../img/index/sprite215new.png) no-repeat;margin-right: 4px;}
+#footer .footer_down dl dd{padding-left: 30px;}
+#footer .footer_down dl dd a{color: #666;line-height: 1.5;}
+#footer .footer_down dl dd a:hover{text-decoration: none;color: #FF5c00;}
+#footer .footer_down dl dt span.gwzn{background-position:  -90px 0;}
+#footer .footer_down dl dt span.zffs{background-position:  -90px -40px;}
+#footer .footer_down dl dt span.psfs{background-position:  -90px -80px;}
+#footer .footer_down dl dt span.shfw{background-position:  -90px -120px;}
+#footer .footer_down dl dt span.gywm{background-position:  -90px -160px;}
+#footer .footer_down dl dt span.lxwm{background-position:  -90px -195px;}
+#footer .footer_down .footer_ma{position: absolute;right: 50px;top: 20px;}
+#footer .footer_down span.l{display: block;padding: 5px;}
+
+
+/*=====================bottom====================*/
+#bottom{height: 150px;width: 100%;text-align: center;}
+#bottom ul{overflow: hidden;width: 100%;text-align: center;margin: 20px 0 10px;}
+#bottom ul li{display: inline;}
+#bottom ul li a{margin: 0 5px;}
+#bottom p{width: 100%;text-align: center;margin-bottom: 10px;}
+#bottom div{width: 100%;text-align: center;}
+#bottom div a{display: inline-block;vertical-align: middle;}
+#bottom .bott_div{height: 40px;vertical-align: middle;}
+#bottom .bott_div img{display:inline-block;vertical-align: middle;}
+#bottom .bott_div span{vertical-align: middle;height: 20px;}
+
+

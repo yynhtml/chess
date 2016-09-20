@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/common2.css"/>
+		<link rel="stylesheet" type="text/css" href="../css/shoppingcar.css"/>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../js/cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				var cookies = document.cookie;
+				//alert(cookies);
+				var cook = cookies.split("; ");
+				var arr = [];
+				for(var i=0;i<cook.length;i++){
+					var daid=cook[i].split("=");
+					var nameid=daid[0]*1;
+					var goods = daid[1]*1
+					
+					if((!isNaN(nameid)) && (!isNaN(goods))){
+						arr.push(daid[1]);
+					}
+				}
+				if(arr.length){
+					$(".car_cont1").css("display","block");
+					$(".box1").css("display","none");
+					var danjia = 0;
+					$.ajax({
+						type:"post",
+						url:"../js/list_cont2.json",
+						dataType:"json",
+						success:function(data){
+							var str = '';
+							var count = 0;
+							for(var j = 0;j < arr.length;j++){
+								for(var i = 0;i < data.length;i++){
+									if(arr[j] == data[i].id){
+										str += '<div class="car_cont1_middle">';
+										str += '<div class="car_left">';
+										str += '<a href="javascript:;"><img src="'+data[i].Img+'"/></a>';
+										str += '<p><a href="javascript:;">'+data[i].cont+'</a></p>';
+										str += '</div><ul><li class="danjia"><span class="goodsPrice">¥'+data[i].price+'</span>';
+										str += '</li><li><w id="'+data[i].price+'">';
+										str += '<a href="javascript:;" class="jian">-</a><input type="text" class="num" value="'+getCookie("n"+data[i].id)+'" /><a href="javascript:;" class="jia">+</a></w></li>';
+										str += '<li><strong  class="goodsPrice" id="xiaoji">¥'+Number((data[i].price)*getCookie("n"+data[i].id))+'</strong></li>';
+										str += '<li><a href="javascript:;" class="del" id="'+data[i].id+'">删除</a></li></ul></div>';
+										count += Number((data[i].price)*getCookie("n"+data[i].id));
+									}
+								}
+							}
+							$("#count").html(count.toFixed(2));
+							$(str).insertAfter(".car_cont1_top");
+							$(".car_cont1").on("click",".jian",function(){
+								var num = $(this).parents("w").find(".num").val();
+								var dataid = $(this).parents("ul").find(".del").attr("id");
+								//alert(num);
+								if(num > 1){
+									num--;
+									var w = $(this).parents("w").attr("id");
+									count -= Number(w);	
+									$("#count").html(count.toFixed(2));
+									setCookie("n"+dataid,num,setCookieDate(7),-1);	
+									$(this).parents("ul").find("#xiaoji").html("¥"+(num*w).toFixed(2));
+								}
+								$(this).parents("w").find(".num").val(num);
+								
+							});
+							$(".car_cont1").on("click",".jia",function(){
+								var num = $(this).parents("w").find(".num").val();
+								var dataid = $(this).parents("ul").find(".del").attr("id");
+								//alert(num);
+								num++;
+								var w = $(this).parents("w").attr("id");
+								count += Number(w);	
+								$("#count").html(count.toFixed(2));
+								setCookie("n"+dataid,num,setCookieDate(7),-1);
+								$(this).parents("w").find(".num").val(num);
+								$(this).parents("ul").find("#xiaoji").html("¥"+(num*w).toFixed(2));
+							});
+							$(".car_cont1").on("click",".del",function(){
+								var dataid = $(this).attr("id");
+								deleteCookie(dataid);
+								$(this).parents(".car_cont1_middle").remove();
+								window.location.reload();
+							})
+						}
+					});
+				}else{
+					$(".car_cont1").css("display","none");
+					$(".box1").css("display","block");
+				}
+			})
+		</script>
+		<script type="text/javascript">
+			$(function(){
+				if(getCookie("oname")){
+					$("#log").html('<b>'+getCookie("oname")+'</b><a href="javascript:;" id="tuichu" style="display: inline-block;">[退出]</a>');
+					$("#lala").html("欢迎您！<b>"+getCookie("oname")+"</b>");
+				}else{
+					$("#log").html('<a class="l" href="login.html">[登录]</a><a class="l" href="zhuce.html">[免费注册]</a>');
+					$("#lala").html('立即<a href="login.html">[登录]</a>，可将商品永久保存在购物车中');
+				}
+				$("#log").on("click","#tuichu",function(){
+					removeCookie("oname");
+					window.location.href = "shoppingcar.html";
+				})
+			})
+		</script>		
+	</head>
+	<body>
+		<div id="h_nav">
+			<div class="w">
+				<ul class="l first">
+					<li class="l cur"><a href="../index.html">母婴之家</a></li>
+					<li class="l"><a href="javascript:;">母婴海淘</a></li>
+					<li class="l last"><a href="#"><span></span>手机版</a></li>
+				</ul>
+				<ul class="r wai">
+					<li class="l wu" style="padding-right: 0;"><a style="padding-right: 0;">欢迎来到母婴之家！</a></li>
+					<li class="l log" id="log"><a class="l" href="#">[登录]</a><a class="l" href="#">[免费注册]</a></li>
+					<li class="l list">
+						<a class="w_a" href="#">我的订单<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">我的家</a>
+							<a class="n_a" href="#">我的提问</a>
+							<a class="n_a" href="#">我的评论</a>
+							<a class="n_a" href="#">我的收藏</a>
+							<a class="n_a" href="#">我的幸运星</a>
+						</div>
+					</li>
+					<li class="l list"><a class="w_a" href="#">客户服务<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#" style="width: 80px;">在线客服</a>
+							<a class="n_a" href="#" style="width: 80px;">帮助中心</a>
+						</div>
+					</li>
+					<li class="l"><a href="#">商务合作</a></li>
+					<li class="l list wu"><a class="w_a" href="#">网站导航<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">分类导航</a>
+							<a class="n_a" href="#">品牌导航</a>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div id="header" class="w">
+			<h1 class="l"><a href="#"><img src="../img/index/logo29new.png"/></a></h1>
+			<div class="car_nav r"></div>
+		</div>	
+		<div id="content" class="w">
+			<div class="car_top">
+				<h2 class="l"><i></i>我的购物车</h2>
+				<p class="r" id="lala">立即<a href="javascript:;">[登录]</a>，可将商品永久保存在购物车中</p>
+			</div>
+			<div class="car_down">
+				<div class="car_cont1" style="display: none;">
+					<div class="car_cont1_top">
+						<h2 class="l">母婴之家商城<span>母婴之家商城购物车</span></h2>
+						<ul class="r">
+							<li>单价（元）</li>
+							<li>数量（件）</li>
+							<li>小计（元）</li>
+							<li>操作</li>
+						</ul>
+					</div>					
+					<div class="car_cont1_down">
+						<p><span class="l1">已优惠:</span><span class="l2"> 0.00 <aa>元</aa></span><span class="l3">  总计：  </span><span class="l4" id="count">358.00</span></p>
+					</div>
+				</div>
+				<div class="box1" style="height: 100px;background: #fff;width: 100%;text-align: center;line-height: 100px;margin: 20px 0;font-size: 24px;font-weight: bold;display: none;">
+						您的购物车还没有任何东西哦！去逛逛吧！
+				</div>
+			</div>
+		</div>
+		
+		<div id="bottom" class="w" style="background: #fff;position: fixed;bottom: 0;">
+			<ul class="bottom_ul">
+				<li><a href="#">首页</a></li> | 
+				<li><a href="#">公司简介</a></li> |
+				<li><a href="#">人才招聘</a></li> |
+				<li><a href="#">合作联系</a></li> |
+				<li><a href="#">企业理念</a></li> |
+			</ul>
+			<p>Copyright©2003 - 2016 muyingzhijia.com All Rights Reserved沪ICP备09021709号</p>
+			<div><a href="#"><img src="../img/index/shanghai_industry.gif"/></a></div>
+			<div class="bott_div"><a href="#"><img src="../img/index/ghs.png"/><span>沪公网安备 31010402000751号</span></a></div>
+		</div>				
+	</body>
+</html>

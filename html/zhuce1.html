@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="../css/conmmon.css"/>
+		<style type="text/css">
+			#content{height: 587px;background: #E9E9E9;padding-top: 55px;}
+			#content .cont_box{height: 480px;background: #fff;border: 1px solid #ccc;padding: 40px 10px 10px;position: relative;}
+			#content .cont_box ul{position: absolute;top: -38px;left: 42%;margin-left: -253px;}
+			#content .cont_box li{height: 36px;border: 1px solid #ccc;background: #F8F8F8;margin-left: 10px;border-bottom: 0;line-height: 35px;width: 240px;text-align: center;}
+			#content .cont_box li a{font-size: 14px;font-weight: bold;color: #979797;}
+			#content .cont_box li.cont_zhuce{border-top: 3px solid #FF5C00;height: 35px;background: #fff;}
+			#content .cont_box li.cont_zhuce a{color: #FF5C00}
+			#content .cont_box li.cont_zhuce i{display: inline-block;height: 27px;width: 27px;vertical-align: -7px;background: url(../img/index/register.png) no-repeat -187px -2px;}
+			#content .cont_box li.cont_login i{display: inline-block;height: 20px;width: 36px;vertical-align: -6px;background: url(../img/index/register.png) no-repeat -216px -8px;}
+			#content .cont_box form{width: 500px;}
+			#content .cont_box form dl{height: 70px;line-height: 70px;}
+			#content .cont_box form dl dt{width: 180px;padding-right: 20px;text-align: right;height: 70px;}
+			#content .cont_box form dl dd{width: 300px;}
+			#content .cont_box form dl dd input{vertical-align: middle;margin: 0 5px 0 10px;}
+			#content .cont_box form dl dd input.ipt{height: 200px;height: 30px;line-height: 30px;padding-left: 5px;}
+			#content .cont_box .cont_sub{display: block;height: 40px;width: 230px;background: url(../img/index/register.png) no-repeat 0 -190px;margin: 10px 0 20px 0;}
+			#content .cont_box .cont_Img{position: absolute;top: 50px;right: 90px;}
+			#content .cont_box .cont_Img img{width: 340px;height: 300px;}
+		</style>
+		<script src="../js/jquery-1.11.3.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			$(function(){
+				$("#huaiyun").click(function(){
+					$(".sex").css("display","none");
+					$(".shengri").css("display","none");
+					$(".yuchan").css("display","block");
+				});
+				$("#baby").click(function(){
+					$(".sex").css("display","block");
+					$(".shengri").css("display","block");
+					$(".yuchan").css("display","<none></none>");
+				});
+				var flag = 0;
+				$("#date").blur(function(){
+					if(!/^\d{4}(\-|\/|\.)\d{1,2}\1\d{1,2}$/.test($(this).val())){
+						$(this).val("请输入正确日期！");
+						flag = 0;
+					}else{
+						flag = 1;
+					}
+				});
+				$("#date").focus(function(){
+					$(this).val("");
+				})
+				$("#mail").blur(function(){
+					if(!/^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/.test($(this).val())){
+						$(this).val("格式不正确，请重新输入！");
+						flag = 0;
+					}else{
+						flag = 1;
+					}
+				})
+				$("#mail").focus(function(){
+					$(this).val("");
+				})
+				$(".cont_sub").click(function(){
+					if(flag == 1){
+						window.location.href = "login.html";
+					}
+						
+				})
+			})
+		</script>
+	</head>
+	<body>
+		<div id="h_nav">
+			<div class="w">
+				<ul class="l first">
+					<li class="l cur"><a href="#">母婴之家</a></li>
+					<li class="l"><a href="#">母婴海淘</a></li>
+					<li class="l last"><a href="#"><span></span>手机版</a></li>
+				</ul>
+				<ul class="r wai">
+					<li class="l wu" style="padding-right: 0;"><a style="padding-right: 0;">欢迎来到母婴之家！</a></li>
+					<li class="l log"><a class="l" href="#">[登录]</a><a class="l" href="#">[免费注册]</a></li>
+					<li class="l list">
+						<a class="w_a" href="#">我的订单<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">我的家</a>
+							<a class="n_a" href="#">我的提问</a>
+							<a class="n_a" href="#">我的评论</a>
+							<a class="n_a" href="#">我的收藏</a>
+							<a class="n_a" href="#">我的幸运星</a>
+						</div>
+					</li>
+					<li class="l list"><a class="w_a" href="#">客户服务<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#" style="width: 80px;">在线客服</a>
+							<a class="n_a" href="#" style="width: 80px;">帮助中心</a>
+						</div>
+					</li>
+					<li class="l"><a href="#">商务合作</a></li>
+					<li class="l list wu"><a class="w_a" href="#">网站导航<i></i></a>
+						<div class="nei_dingdan">
+							<a class="n_a" href="#">分类导航</a>
+							<a class="n_a" href="#">品牌导航</a>
+						</div>
+					</li>
+				</div>
+			</div>
+		</div>
+		<div id="header" class="w">
+			<h1 class="l"><a href="#"><img src="../img/index/logo29new.png"/></a></h1>		
+		</div>
+		<div id="content">
+			<div class="cont_box w">
+				<ul>
+					<li class="cont_zhuce l">
+						<i></i>
+						<a href="zhuce.html" target="_blank">注册</a>
+					</li>
+					<li class="cont_login l">
+						<i></i>
+						<a href="login.html">登录</a>
+					</li>					
+				</ul>
+				<form action="" method="post">
+					<dl>
+						<dt class="l">是否有宝宝：</dt>
+						<dd class="l">
+							<label><input type="radio" name="baby" id="baby" checked />已有宝宝</label>
+							<label><input type="radio" name="baby" id="huaiyun" />怀孕中</label>
+						</dd>
+					</dl>
+					<dl class="sex">
+						<dt class="l">宝宝的性别：</dt>
+						<dd class="l">
+							<label><input type="radio" name="sex" />小公主</label>
+							<label><input type="radio" name="sex" />小王子</label>
+						</dd>
+					</dl>
+					<dl class="shengri">
+						<dt class="l">宝宝的生日：</dt>
+						<dd class="l">	
+							<input class="ipt" id="date" value=""  placeholder="请填入宝宝生日">
+						</dd>
+					</dl>
+					<dl class="yuchan" style="display: none;">
+						<dt class="l">宝宝的预产期：</dt>
+						<dd class="l">
+							<input type="text" id="date" value="" class="ipt" placeholder="请填入宝宝生日" />
+						</dd>
+					</dl>
+					<dl>
+						<dt class="l">邮箱地址：</dt>
+						<dd class="l">
+							<input type="text" id="mail" value="" class="ipt" placeholder="请填入邮箱地址" />
+						</dd>
+					</dl>
+					<dl class="sex">
+						<dt class="l">您是宝宝的：</dt>
+						<dd class="l">
+							<label><input type="radio" name="qinren" />妈妈</label>
+							<label><input type="radio" name="qinren" />爸爸</label>
+							<label><input type="radio" name="qinren" />亲友</label>
+						</dd>
+					</dl>	
+					<dl>
+						<dt class="l"></dt>
+						<dd class="l"><a class="cont_sub" href="javascript:;"></a></dd>
+					</dl>
+				</form>
+				<div class="cont_Img">
+					<a href="../index.html"><img src="../img/index/20160323111355_10_300x300.jpg"/></a>
+				</div>
+			</div>
+		</div>
+
+		<div id="bottom" class="w">
+			<ul class="bottom_ul">
+				<li><a href="#">首页</a></li> | 
+				<li><a href="#">公司简介</a></li> |
+				<li><a href="#">人才招聘</a></li> |
+				<li><a href="#">合作联系</a></li> |
+				<li><a href="#">企业理念</a></li> |
+			</ul>
+			<p>Copyright©2003 - 2016 muyingzhijia.com All Rights Reserved沪ICP备09021709号</p>
+			<div><a href="#"><img src="../img/index/shanghai_industry.gif"/></a></div>
+			<div class="bott_div"><a href="#"><img src="../img/index/ghs.png"/><span>沪公网安备 31010402000751号</span></a></div>
+		</div>	
+	</body>
+</html>

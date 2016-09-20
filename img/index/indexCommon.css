@@ -1,0 +1,95 @@
+
+
+/*焦点图ʽ*/
+.focus { width: 100%; height: 350px; overflow: hidden; position: relative;}
+.focusImg { position: absolute; left: 0; top: 0; width: 99999px;}
+.focusImg li { float: left; }
+.focusImg li img { float: left;  width:1090px; height:350px;}
+.focusDot { position: absolute; z-index: 10;bottom: 15px; right: 10px;}
+.focusDot li { width: 12px; height: 12px; font-size: 0; overflow: hidden; zoom: 1; border-radius: 6px; background:#fff; background-color: rgba(0,0,0,0.5); float: left; margin-right: 15px; cursor: pointer;}
+.focusDot li.curDot { background-color: #29b6f6;}
+.loading { background:url("../images/loading3.gif") no-repeat; width:20px; height:20px; margin: 20px auto; }
+
+/*特卖专栏*/
+.ui-brand { position:relative }
+.ui-title { margin:20px 0 10px }
+.ui-title .span1{ height:1px; width:450px;background:#ccc;vertical-align: 9px;}
+.ui-title .titleImg{margin: 0 31px; background:url("../images/newIndex/newIndexHeader.png") no-repeat; width:119px; height:48px;}
+.ui-title .span4{background-position: 0 -54px;}
+.ui-title .span5{background-position: 0 0}
+
+.ui-temai h2 { font-size:20px; font-weight:bold;height: 50px;line-height: 50px; color:#ff5c00 }
+.ui-temai a { background:#fff; }
+.ui-temai-box {width: 1120px;padding: 1px 1px; margin-bottom:20px; }
+.ui-temai-box .ui-temail-item { float:left; border:1px solid #ccc; width:260px; height:282px; margin-left:-1px;border-left-color: #fff; }
+.ui-temai-box .ui-temail-item-first { border-top-left-radius:5px; border-bottom-left-radius:5px; border-left-color: #ccc; }
+.ui-temai-box .ui-temail-item img { display:block; width:220px; height:220px; margin:20px auto 10px}
+.ui-temai-box .ui-temail-item p { font-weight:bold; font-size:12px; color:#df2943; padding-left:20px; }
+.ui-temai-box .ui-temail-item p span { font-weight:bold; font-size:18px; vertical-align:-1px}
+.ui-temai-box .ui-temail-item:hover,.ui-temai-box .ui-temail-enter:hover  { border:1px solid #ff5c00; position:relative; z-index:3 }
+.ui-temai-box .ui-temail-list { float:left;  width:160px; height:280px;height: 282px;margin-top: 1px;}
+.ui-temai-box .ui-temail-list a {display:block;   border:1px solid #ccc;  margin:-1px 0 0 -1px;width:160px;}
+.ui-temai-box .ui-temail-list .ui-temail-brand { height:100px;}
+.ui-temai-box .ui-temail-list .ui-temail-brand img { display:block; width:100px; height:50px; margin:21px 20px 20px }
+.ui-temai-box .ui-temail-list .ui-temail-title {  height:80px; text-align:center; }
+.ui-temai-box .ui-temail-list .ui-temail-title span { display: inline-block;font-weight: bold;width: 110px;vertical-align: middle;font-size: 16px;color: #f69;line-height: 20px;}
+.ui-temai-box .ui-temail-list .ui-temail-title .ui-temai-price { font-size:20px;line-height: 38px;}
+.ui-temai-box .ui-temail-list .ui-temail-title .ui-temai-price strong { font-size:38px;font-weight: bold;font-family: "宋体"; }
+.ui-temai-box .ui-temail-list .ui-temail-title .blank { height:80px; width:1px; }
+.ui-temai-box .ui-temail-list .ui-temail-discount { height:100px }
+.ui-temai-box .ui-temail-list .ui-temail-discount .blank { height:100px; }
+.ui-temai-box .ui-temail-list2 {width:146px; }
+.ui-temai-box .ui-temail-list2 a { width:145px;margin-left: 0; }
+.ui-temai-box .ui-temail-list2 .ui-temail-clock { height:100px; border-top-right-radius:5px; }
+.ui-temai-box .ui-temail-list2 .ui-temail-clock .ui-temail-clock-time {margin-top: 30px; font-size: 14px; color:#999; text-align: center; }
+.ui-temai-box .ui-temail-list2 .ui-temail-clock i {display:inline-block; vertical-align: -4px; width:16px; height:18px; background:url("../images/newIndex/newIndexIcon.png") -250px -63px no-repeat; margin-right:5px}
+.ui-temai-box .ui-temail-list2 .ui-temail-clock p {font-weight: bold; text-align:center; font-size:16px; margin-top:3px; color:#f69 }
+.ui-temai-box .ui-temail-list2 .ui-temail-enter { height:140px; border-radius:0; border-bottom-right-radius:5px; }
+.ui-temai-box .ui-temail-list2 .ui-temail-enter { height:181px; }
+/*.ui-temai-box a:hover { border:1px solid #ff5c00; position:relative; z-index:3 }*/
+.ui-temai-box .ui-temail-list2 .ui-temail-enter-bg0 { background:#eed3ff}
+.ui-temai-box .ui-temail-list2 .ui-temail-enter-bg1 { background:#ffb2cb}
+.ui-temai-box .ui-temail-list2 .ui-temail-enter-bg2 { background:#bdecf5}
+.ui-temai-box .ui-temail-list2 .ui-temail-enter-bg3 { background:#fcd0ca}
+.ui-temai-box .ui-temail-list2 .ui-temail-enter p{ width:100px; font-size:22px;color: #fff;margin:8px auto 10px;line-height: 26px;}
+.ui-temai-box .ui-temail-list2 .ui-temail-enter span { display:block; width:80px;height:80px; background:url("../images/newIndex/newIndexIcon.png") -185px -132px no-repeat; margin:20px auto 0 }
+.ui-temai .ui-temai-more { background: url(../images/syzc.png) no-repeat;height: 40px;width: 145px;margin: 0 auto;display: block;padding-bottom: 15px;}
+
+.ui-ad-top {
+    width: 1090px;
+    margin: 20px auto;
+}
+
+.ui-ad-top .ui-ad-content {
+    width: 1120px;
+    overflow: hidden;
+}
+
+.ui-ad-top .ui-ad-content  a {
+      display: block;
+  float: left;
+  width: 350px;
+  height: 150px;
+  margin-right: 17px;
+  border: 1px solid #ccc;
+}
+
+.ui-ad-top .ui-ad-content  a:hover {
+    border: 1px solid #ff5c00
+}
+
+.ui-ad-top .ui-ad-content  a img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+
+
+
+
+
